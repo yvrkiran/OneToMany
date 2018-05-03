@@ -15,7 +15,16 @@ public class EmployeeServiceImp implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    public void setEmployeeRepository(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
     public Optional<Employee> findById(Long id) {
+
         return employeeRepository.findById(id);
+    }
+
+    public String getName(){
+        return "ravi";
     }
 }
